@@ -1,8 +1,14 @@
 const multer = require('multer');
 const path = require('path');
+const os = require('os');
+
+// Vercel's filesystem is read-only except /tmp - files written there don't
+// persist between requests, but at least the upload won't crash the server.
+// Locally and on a normal server (Docker, etc.) this just uses the real uploads folder.
+const uploadDir = process.env.VERCEL ? os.tmpdir() : path.join(__dirname, '../../uploads');
 
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, path.join(__dirname, '../../uploads')),
+  destination: (req, file, cb) => cb(null, uploadDir),
   filename: (req, file, cb) => {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
     cb(null, uniqueSuffix + path.extname(file.originalname));
