@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f7f9;
+  color: #222;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  width: 100%;
+}
+
+/* buttons */
+.btn-primary {
+  display: inline-block;
+  background: #2f5d50;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #2f5d50;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* status / feedback text */
+.status-msg {
+  text-align: center;
+  color: #666;
+  margin-top: 40px;
+}
+
+.status-msg.error {
+  color: #b03434;
+}
+
+.form-error {
+  color: #b03434;
+  font-size: 14px;
+}
+
+.form-msg {
+  color: #2f5d50;
+  font-size: 14px;
+}
+
+/* auth pages */
+.auth-page {
+  max-width: 380px;
+  margin: 40px auto;
+}
+
+.auth-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-page input,
+.admin-product-form input,
+.admin-product-form textarea,
+.admin-product-form select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.auth-page button {
+  padding: 10px;
+  background: #2f5d50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.test-accounts-hint {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #777;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+/* home page */
+.home-page {
+  text-align: center;
+  padding: 60px 0;
+}
+
+/* filters */
+.filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters-bar input,
+.filters-bar select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* pagination */
+.pagination {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+/* product detail */
+.product-detail-page {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.product-detail-img img {
+  max-width: 350px;
+  border-radius: 8px;
+}
+
+.product-detail-price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.add-to-cart-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.add-to-cart-row input {
+  width: 60px;
+  padding: 6px;
+}
+
+/* cart / checkout */
+.cart-row,
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cart-row input {
+  width: 60px;
+}
+
+.cart-total {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+.order-confirmation-note {
+  color: #666;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* admin */
+.admin-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.admin-product-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
